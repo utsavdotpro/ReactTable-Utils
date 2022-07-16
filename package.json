@@ -10,6 +10,11 @@
   "main": "dist/index.js",
   "module": "dist/index.js",
   "version": "0.1.0",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/utsavdotpro/react-table-utils.git"
+  },
   "scripts": {
     "prepublish": "tsc",
     "build": "tsc",
