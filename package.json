@@ -1,4 +1,11 @@
 {
+  "scripts": {
+    "prepublish": "tsc",
+    "build": "tsc",
+    "dev": "ts-node ./src",
+    "patch": "npm version patch -m \"update package version to %s\"",
+    "test": "jest"
+  },
   "devDependencies": {
     "typescript": "^4.7.4"
   },
