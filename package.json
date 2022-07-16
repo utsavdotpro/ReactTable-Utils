@@ -1,4 +1,20 @@
 {
+  "name": "react-table-utils",
+  "description": "Util functions & classes for easily creating TanStack React Tables v8.",
+  "author": "Utsav Barnwal",
+  "keywords": [
+    "react",
+    "react-table",
+    "table"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "version": "0.1.1",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/utsavdotpro/ReactTable-Utils.git"
+  },
   "scripts": {
     "prepublish": "tsc",
     "build": "tsc",
