@@ -1,27 +1,24 @@
-name: Deploy Package
+name: Publish Package
 
 on:
   push:
     branches:
       - LIB-27
-
+      
 jobs:
-  publish-gpr:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checking out current repository
+      - name: Checkout
         uses: actions/checkout@v2
-
-      - name: Set up node
-        uses: actions/setup-node@v1
+      - name: Setup Node
+        uses: actions/setup-node@v2
         with:
-          node-version: 12
-          registry-url: https://npm.pkg.github.com/
-        
-      - name: Install packages
-        run: npm install
-
-      - name: Publish
+          node-version: '16.x'
+          registry-url: 'https://registry.npmjs.org'
+      - name: Install dependencies and build 🔧
+        run: yarn install && yarn build
+      - name: Publish package on NPM 📦
         run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
