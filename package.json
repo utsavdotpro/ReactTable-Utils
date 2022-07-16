@@ -13,7 +13,11 @@
   "private": false,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/utsavdotpro/react-table-utils.git"
+    "url": "ssh://git@github.com/utsavdotpro/ReactTable-Utils.git",
+    "directory": "packages/react-table-utils"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
   "scripts": {
     "prepublish": "tsc",
