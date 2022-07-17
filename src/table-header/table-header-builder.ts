@@ -1,18 +1,34 @@
 import { ColumnDef } from "@tanstack/react-table";
+
 import TableHeader from ".";
 
 export class TableHeaderBuilder<T> {
   headers: TableHeader<T>[] = [];
 
-  add(
+  addAt(
+    position: number | undefined,
     idOrKey: keyof T | string,
-    fn?: (column: TableHeader<T>) => TableHeader<T>
+    fn?: (column: TableHeader<T>) => TableHeader<T>,
+    toAdd: boolean = true
   ): TableHeaderBuilder<T> {
-    const header = new TableHeader(idOrKey);
+    if (!toAdd) return this;
 
-    this.headers.push(fn ? fn(header) : new TableHeader<T>(idOrKey));
+    let header = new TableHeader(idOrKey);
+
+    header = fn ? fn(header) : header;
+
+    if (position === undefined) this.headers.push(header);
+    else this.headers.splice(position, 0, header);
 
     return this;
+  }
+
+  add(
+    idOrKey: keyof T | string,
+    fn?: (column: TableHeader<T>) => TableHeader<T>,
+    toAdd: boolean = true
+  ): TableHeaderBuilder<T> {
+    return this.addAt(undefined, idOrKey, fn, toAdd);
   }
 
   build(): ColumnDef<T>[] {
