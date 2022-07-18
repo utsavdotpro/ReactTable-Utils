@@ -1,6 +1,6 @@
 # React Table Utils
 
-Util functions & classes for easily creating [TanStack Table v8](https://tanstack.com/table/v8/?from=reactTableV7&original=https://react-table-v7.tanstack.com/) (ReactTable).
+Util functions & classes for working with [TanStack Table v8](https://tanstack.com/table/v8/?from=reactTableV7&original=https://react-table-v7.tanstack.com/) (ReactTable) easily & quickly.
 
 ---
 
@@ -79,3 +79,17 @@ new TableHeaderBuilder<EntityType>()
 ## Comparing the Code Structure
 
 ![](./samples/comparison.png)
+
+## Features
+
+ - More readable & maintainable code
+ - Ability to rearrange columns
+ - Easy to set table defaults
+ - 100% type-safe
+ - Headless, just like ReactTable
+  
+
+## Contribution
+> I wrote this package while working on a client project and since this package doesn't not have all the properties supported by TanStack table. But, they can be added easily.
+
+Feel free to open a pull request if you want to add support for more properties and enhance this package. You can also open an issue and I might add the support for you (based on my availability).
