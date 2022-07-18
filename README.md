@@ -88,6 +88,6 @@ new TableHeaderBuilder<EntityType>()
   
 
 ## Contribution
-> I wrote this package while working on a client project and since this package doesn't not have all the properties supported by TanStack table. But, they can be added easily.
+> I wrote this package while working on a client project and thus, this package doesn't not have all the properties supported by TanStack table. But, they can be added easily.
 
 Feel free to open a pull request if you want to add support for more properties and enhance this package. You can also open an issue and I might add the support for you (based on my availability).
