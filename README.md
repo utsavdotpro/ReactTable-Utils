@@ -2,8 +2,6 @@
 
 Util functions & classes for working with [TanStack Table v8](https://tanstack.com/table/v8/?from=reactTableV7&original=https://react-table-v7.tanstack.com/) (ReactTable) easily & quickly.
 
----
-
 ## Install
 
 ````bash
@@ -14,7 +12,7 @@ npm install react-table-utils
 
 ## Getting Started
 
-This is utils package for TanStack Table so you need to install it to your project.
+This is a utils package for TanStack Table so you need to install it to your project.
 
 ````bash
 yarn @tanstack/react-table
