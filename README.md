@@ -75,3 +75,7 @@ new TableHeaderBuilder<EntityType>()
   )
   .build(); // returns an array of (TableHeader) JSON objects
 ````
+
+## Comparing the Code Structure
+
+![](./samples/comparison.png)
